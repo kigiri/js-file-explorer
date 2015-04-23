@@ -1,0 +1,35 @@
+{
+  "name": "Better Index",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Improve design for file Indexes from ngnix",
+  "homepage_url": "http://cdenis.net/better-index",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://*/",
+    "http://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dl.cdenis.net/*",
+        "http://dl.cdenis.net/*"
+      ],
+      "css": [ "src/inject/inject.css" ]
+    },
+    {
+      "matches": [
+        "https://dl.cdenis.net/*",
+        "http://dl.cdenis.net/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

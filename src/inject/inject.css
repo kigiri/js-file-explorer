@@ -1,0 +1,181 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+
+pre a, pre, h1, hr {
+  color: #333;
+  background: #333;
+  border: 0;
+}
+
+body {
+  background: #333;
+  color: #999;
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.c-0, .c-0 a { /* diverse */
+  color: #EEEEEE;
+}
+.c-0 text { fill: #EEEEEE; }
+.c-0 .tag {
+  background: #EEEEEE;
+}
+
+.c-1, .c-1 a { /* binaire */
+  color: #AEABFF;
+}
+.c-1 text { fill: #AEABFF; }
+.c-1 .tag {
+  background: #AEABFF;
+}
+
+.c-2, .c-2 a { /* image */
+  color: #FFC3A2;
+}
+.c-2 text { fill: #FFC3A2; }
+.c-2 .tag {
+  background: #FFC3A2;
+}
+
+.c-3, .c-3 a { /* audio */
+  color: #CBFF9B;
+}
+.c-3 text { fill: #CBFF9B; }
+.c-3 .tag {
+  background: #CBFF9B;
+}
+
+.c-4, .c-4 a { /* video */
+  color: #7CE3FF;
+}
+.c-4 text { fill: #7CE3FF; }
+.c-4 .tag {
+  background: #7CE3FF;
+}
+
+.c-5, .c-5 a { /* archive */
+  color: #84FFDE;
+}
+.c-5 text { fill: #84FFDE; }
+.c-5 .tag {
+  background: #84FFDE;
+}
+
+.c-6, .c-6 a { /* directory */
+  color: #FF8CD5;
+}
+.c-6 text { fill: #FF8CD5; }
+.c-6 .tag {
+  background: #FF8CD5;
+}
+
+text {
+  fill: #CBFF9B;
+}
+
+tr:nth-child(even) { background: #282828; }
+tr:nth-child(even) td:nth-child(odd) { background: #202020; }
+tr:nth-child(odd) td:nth-child(even) { background: #3C3C3C; }
+td:nth-last-child(2) {
+  text-align: right;
+  padding-right: 5px;
+  white-space: pre;
+  max-width: 0;
+}
+
+td { padding-left: 5px; }
+.name i, .date i {
+  color: #727272;
+  font-size: 11px;
+}
+.size i {
+  font-style: normal;
+  font-weight: bold;
+  opacity: .5;
+}
+.tag {
+  color: black;
+  padding: 0 3px;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.tag:hover { opacity: 1; }
+
+svg {
+  max-height: 26px;
+  max-width: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #4B4B4B;
+}
+.path-bar {
+  margin-left: 8px;
+}
+
+.path-component {
+  height: 21px;
+  margin: 0 10px 0 0;
+  padding: 0 7px;
+  white-space: nowrap;
+  position: relative;
+
+  background: #3C3C3C;
+  color: #aaa;
+
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  border-radius: 1px 3px 3px 1px;
+
+  font-size: 11px;
+
+  display: inline-block;
+  float: left;
+  margin-right: -4px;
+  padding-right: 14px;
+  margin-bottom: 7px;
+  line-height: 21px;
+}
+
+.path-component::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  width: 9px;
+  height: 9px;
+
+  background: #3C3C3C;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-radius: 0 0 0 2px;
+}
+.path-component::before {
+  transform: scale(1, 1.5) rotate(45deg);
+}
+
+.path-component:hover {
+  color: #FFF;
+  text-shadow: -1px -1px 0 rgba(153,102,51,0.3);
+}
+
+a:nth-child(even) .path-component::before { background: #202020; }
+a:nth-child(even) .path-component { background: #202020; }
+
+/*
+  #CBFF9B // citron
+  #84FFDE // turquoise
+  #7CE3FF // ciel
+  #AEABFF // violet
+  #FF8CD5 // rose
+  #FFC3A2 // saumon
+*/
