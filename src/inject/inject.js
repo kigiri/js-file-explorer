@@ -370,8 +370,18 @@ var App = React.createClass({
   sortFunction: {
     filename: function (reverse) {
       return (reverse)
-      ? function (a, b) { return (b.filename.str < a.filename.str) ? -1 : 1; }
-      : function (a, b) { return (a.filename.str < b.filename.str) ? -1 : 1; }
+      ? function (a, b) {
+        if (b.filename.str !== a.filename.str) {
+          return (b.filename.str < a.filename.str) ? -1 : 1;   
+        }
+        return (b.link < a.link) ? -1 : 1;
+      }
+      : function (a, b) {
+        if (b.filename.str !== a.filename.str) {
+          return (a.filename.str < b.filename.str) ? -1 : 1;   
+        }
+        return (a.link < b.link) ? -1 : 1;
+      }
     },
 
     type: function (reverse) {
